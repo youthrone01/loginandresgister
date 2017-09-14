@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Success</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <style>
+            h3{
+                background-color: green;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <h3>You are successfully login!!</h3>
+        <p>your info is below</p>
+        <ul>
+        {% for user in the_user %}
+        <li>{{user['id']}}</li>
+        <li>{{user['first_name']}}</li>
+        <li>{{user['last_name']}}</li>
+        <li>{{user['password']}}</li>
+        <li>{{user['salt']}}</li>
+        <li>{{user['created_at']}}</li>
+        {% endfor%}
+        </ul>
+    
+    </body>
+</html>
